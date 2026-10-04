@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const post_controller_1 = require("./post.controller");
+const middlewares_1 = require("../../middlewares");
+const post_dto_1 = require("./post.dto");
+const router = (0, express_1.Router)();
+router.post("/", middlewares_1.isAuth, (0, middlewares_1.isValid)(post_dto_1.createPostSchema), post_controller_1.createPost);
+router.post("/reaction", middlewares_1.isAuth, post_controller_1.reaction);
+router.get("/feed/dashboard", middlewares_1.isAuth, post_controller_1.getNewsFeed);
+router.get("/user/:userId/posts", middlewares_1.isAuth, post_controller_1.getProfilePosts);
+router.get("/:id", middlewares_1.isAuth, post_controller_1.getSinglePost);
+router.delete("/:id", middlewares_1.isAuth, post_controller_1.deletePost);
+exports.default = router;

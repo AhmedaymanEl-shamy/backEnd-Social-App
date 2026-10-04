@@ -1,0 +1,22 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.notificationRoute = exports.messageRoute = exports.chatRoute = exports.userRoute = exports.friendRoute = exports.commentRoute = exports.postRoute = exports.authRoute = void 0;
+var auth_route_1 = require("./auth/auth.route");
+Object.defineProperty(exports, "authRoute", { enumerable: true, get: function () { return __importDefault(auth_route_1).default; } });
+var post_route_1 = require("./post/post.route");
+Object.defineProperty(exports, "postRoute", { enumerable: true, get: function () { return __importDefault(post_route_1).default; } });
+var comment_route_1 = require("./comment/comment.route");
+Object.defineProperty(exports, "commentRoute", { enumerable: true, get: function () { return __importDefault(comment_route_1).default; } });
+var friend_route_1 = require("./friend/friend.route");
+Object.defineProperty(exports, "friendRoute", { enumerable: true, get: function () { return __importDefault(friend_route_1).default; } });
+var user_route_1 = require("./user/user.route");
+Object.defineProperty(exports, "userRoute", { enumerable: true, get: function () { return __importDefault(user_route_1).default; } });
+var chat_route_1 = require("./chat/chat.route");
+Object.defineProperty(exports, "chatRoute", { enumerable: true, get: function () { return __importDefault(chat_route_1).default; } });
+var message_route_1 = require("./message/message.route");
+Object.defineProperty(exports, "messageRoute", { enumerable: true, get: function () { return __importDefault(message_route_1).default; } });
+var notification_route_1 = require("./notification/notification.route");
+Object.defineProperty(exports, "notificationRoute", { enumerable: true, get: function () { return __importDefault(notification_route_1).default; } });

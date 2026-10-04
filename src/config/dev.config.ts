@@ -1,0 +1,9 @@
+export const DB_URL = process.env.DB_URL as string;
+export const MAIL_USER = process.env.MAIL_USER as string;
+export const MAIL_PASS = process.env.MAIL_PASS as string;
+export const REDIS_URL = process.env.REDIS_URL as string;
+export const S3_REGION = process.env.S3_REGION as string;
+export const S3_BUCKET_NAME = process.env.S3_BUCKET_NAME as string;
+export const S3_ACCESS_KEY_ID = process.env.S3_ACCESS_KEY_ID as string;
+export const S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY as string;
+export const S3_EXPIRES_IN = process.env.S3_EXPIRES_IN as unknown as number;

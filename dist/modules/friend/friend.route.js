@@ -1,0 +1,15 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const friend_controller_1 = require("./friend.controller");
+const middlewares_1 = require("../../middlewares");
+const friend_validation_1 = require("./friend.validation");
+const router = (0, express_1.Router)();
+router.post("/friends/request/:userId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.userIdParamSchema), friend_controller_1.sendRequest);
+router.post("/friends/accept/:requestId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.requestIdParamSchema), friend_controller_1.acceptRequest);
+router.delete("/friends/request/:requestId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.requestIdParamSchema), friend_controller_1.cancelRequest);
+router.delete("/friends/request/:requestId/reject", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.requestIdParamSchema), friend_controller_1.rejectRequest);
+router.delete("/friends/:userId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.userIdParamSchema), friend_controller_1.removeFriend);
+router.post("/blocks/:userId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.userIdParamSchema), friend_controller_1.blockUser);
+router.delete("/blocks/:userId", middlewares_1.isAuth, (0, middlewares_1.isValid)(friend_validation_1.userIdParamSchema), friend_controller_1.unblockUser);
+exports.default = router;

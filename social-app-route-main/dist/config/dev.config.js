@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.S3_EXPIRES_IN = exports.S3_SECRET_ACCESS_KEY = exports.S3_ACCESS_KEY_ID = exports.S3_BUCKET_NAME = exports.S3_REGION = exports.REDIS_URL = exports.MAIL_PASS = exports.MAIL_USER = exports.DB_URL = void 0;
+exports.DB_URL = process.env.DB_URL;
+exports.MAIL_USER = process.env.MAIL_USER;
+exports.MAIL_PASS = process.env.MAIL_PASS;
+exports.REDIS_URL = process.env.REDIS_URL;
+exports.S3_REGION = process.env.S3_REGION;
+exports.S3_BUCKET_NAME = process.env.S3_BUCKET_NAME;
+exports.S3_ACCESS_KEY_ID = process.env.S3_ACCESS_KEY_ID;
+exports.S3_SECRET_ACCESS_KEY = process.env.S3_SECRET_ACCESS_KEY;
+exports.S3_EXPIRES_IN = process.env.S3_EXPIRES_IN;
